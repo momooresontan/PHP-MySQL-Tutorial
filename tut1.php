@@ -62,19 +62,26 @@
         // } else{
         //     echo "No Discount <br>";
         // }
-        $request = "Pepsi";
-        switch($request) {
-            case "Coke": 
-                echo "Here is your Coke <br>";
-                break;
-            case "Pepsi": 
-                echo "Here is your Pepsi <br>";
-                break;
-            default: 
-                echo "Here is your water <br>";
-                break;
-        }
-
+        //switch case
+        // $age = 16;
+        // switch($age) {
+        //     case ($age < 5): 
+        //         echo "Stay at home <br>";
+        //         break;
+        //     case ($age == 5): 
+        //         echo "Go to Kindergaton <br>";
+        //         break;
+        //     case in_array($age, range(6, 17)):
+        //         $grade = $age - 5;
+        //         echo "Go to grade $grade";
+        //         break;            
+        //     default: 
+        //         echo "Go to college <br>";
+        //         break;
+        // }
+        $age = 18;
+        $can_vote = ($age >= 18) ? "Can vote" : "Cannot vote";
+        echo $can_vote;
     ?>
 
 </body>
