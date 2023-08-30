@@ -4,8 +4,9 @@
     $age = 22;
     $height = 1.76;
     $can_vote = true;
-    $height = 1.76;
-    $height = 1.76;
+    $address = array("street"=>"Plot 8", "city"=>"Ibadan");
+    $state = NULL;
+    define("PI", 3.1452);
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +17,16 @@
     <title>PHP Tutorial</title>
 </head>
 <body>
-    
+    <p>Name: <?php echo $f_name ." ". $l_name; ?></p>
+    <form action="tut1.php" method="get">
+        <label for="state">Your State: </label>
+        <input type="text" name="state" ><br>
+        <label for="state">Number 1: </label>
+        <input type="number" name="num1" ><br>
+        <label for="state">Number 2: </label>
+        <input type="number" name="num2" ><br>
+        <input type="submit">
+    </form>
+
 </body>
 </html>
