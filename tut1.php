@@ -17,7 +17,7 @@
     <title>PHP Tutorial</title>
 </head>
 <body>
-    <p>Name: <?php echo $f_name ." ". $l_name; ?></p>
+    <!-- <p>Name: <?php echo $f_name ." ". $l_name; ?></p>
     <form action="tut1.php" method="get">
         <label for="state">Your State: </label>
         <input type="text" name="state" ><br>
@@ -26,26 +26,35 @@
         <label for="state">Number 2: </label>
         <input type="number" name="num2" ><br>
         <input type="submit" value="submit">
-    </form>
+    </form> -->
     <?php 
-        if(isset($_GET) && array_key_exists("state", $_GET)){
-            $state = $_GET["state"];
-            if(isset($state) && !empty($state)){
-                echo "You live in " . $state . "<br>";
-                echo "$f_name lives in $state <br>";
-            }
-            if(count($_GET) >= 3){
-                $num1 = $_GET["num1"];
-                $num2 = $_GET["num2"];
-                echo "$num1 + $num2 = " . ($num1 + $num2) . "<br>";
-                echo "$num1 - $num2 = " . ($num1 - $num2) . "<br>";
-                echo "$num1 * $num2 = " . ($num1 * $num2) . "<br>";
-                echo "$num1 / $num2 = " . ($num1 / $num2) . "<br>";
-                echo "$num1 % $num2 = " . ($num1 % $num2) . "<br>";
-                echo "$num1 / $num2 = " . (intdiv($num1, $num2)) . "<br>";
+        // if(isset($_GET) && array_key_exists("state", $_GET)){
+        //     $state = $_GET["state"];
+        //     if(isset($state) && !empty($state)){
+        //         echo "You live in " . $state . "<br>";
+        //         echo "$f_name lives in $state <br>";
+        //     }
+        //     if(count($_GET) >= 3){
+        //         $num1 = $_GET["num1"];
+        //         $num2 = $_GET["num2"];
+        //         echo "$num1 + $num2 = " . ($num1 + $num2) . "<br>";
+        //         echo "$num1 - $num2 = " . ($num1 - $num2) . "<br>";
+        //         echo "$num1 * $num2 = " . ($num1 * $num2) . "<br>";
+        //         echo "$num1 / $num2 = " . ($num1 / $num2) . "<br>";
+        //         echo "$num1 % $num2 = " . ($num1 % $num2) . "<br>";
+        //         echo "$num1 / $num2 = " . (intdiv($num1, $num2)) . "<br>";
 
-                echo "increment $num1 = " . ($num1++) . "<br>";
-            }
+        //         echo "increment $num1 = " . ($num1++) . "<br>";
+        //         echo "decrement $num1 = " . ($num1--) . "<br>";
+
+        //         echo number_format(12345.678889, 2) . "<br>";
+        //     }
+        // }
+
+        $num_oranges = 4;
+        $num_bananas = 26;
+        if(($num_oranges > 25 && $num_bananas > 30)){
+            echo "25% discount";
         }
 
     ?>
