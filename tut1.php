@@ -79,9 +79,49 @@
         //         echo "Go to college <br>";
         //         break;
         // }
-        $age = 18;
-        $can_vote = ($age >= 18) ? "Can vote" : "Cannot vote";
-        echo $can_vote;
+        //Tenary operator
+        // $age = 18;
+        // $can_vote = ($age >= 18) ? "Can vote" : "Cannot vote";
+        // echo "Vote?: $can_vote <br>";
+
+        // if(10 === "10"){
+        //     echo "They are equal <br>";
+        // } else {
+        //     echo "They aren't equal <br>";
+        // }
+        //formats
+        //printf("%c %d %.2f %s <br>", 67, 65, 1.234, "String");
+        //String functions
+        // $rand_str = "             Random String                 ";
+        // printf("Length: %d <br>", strlen($rand_str));
+        // printf("Length: %d <br>", strlen(ltrim($rand_str)));
+        // printf("Length: %d <br>", strlen(rtrim($rand_str)));
+        // printf("Length: %d <br>", strlen(trim($rand_str)));
+        
+        // $rand_str = trim($rand_str);
+        // printf("Upper: %s <br>", strtoupper($rand_str));
+        // printf("Lower: %s <br>", strtolower($rand_str));
+        // printf("UC: %s <br>", ucfirst($rand_str));
+        // printf("1st 6: %s <br>", substr($rand_str, 0, 6));
+        // printf("Index : %s <br>", strpos($rand_str, "String"));
+        // $rand_str = str_replace("String", "Characters", $rand_str);
+        // printf("Replace: %s <br>", $rand_str);
+        // printf("A == B: %d <br>", strcmp("B", "A"));
+
+        $friends = array("Lana", "Murewa", "FeyinT", "Sammy");
+        echo "Best friend: " . $friends[1] . "<br>";
+        $friends[4] = "Ade";
+        foreach ($friends as $f){
+            printf("Friend: %s<br>", $f);
+        }
+        $me_info = array("Name"=> "MoMo", "Street"=>"123 Main");
+        foreach($me_info as $k => $v){
+            printf("%s: %s<br>", $f);
+        }
+
+        
+
+
     ?>
 
 </body>
