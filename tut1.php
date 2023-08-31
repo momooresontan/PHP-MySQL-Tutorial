@@ -116,10 +116,26 @@
         }
         $me_info = array("Name"=> "MoMo", "Street"=>"123 Main");
         foreach($me_info as $k => $v){
-            printf("%s: %s<br>", $f);
+            printf("%s: %s<br>", $k, $v);
         }
+        $person = array("Doug");
+        $friends = $friends + $person;
+        sort($friends);
+        rsort($friends);
+        asort($me_info);
+        ksort($me_info);
+        arsort($me_info);
+        krsort($me_info);
+        $customers = array(array("Derek", "123 Main"), array("Sully", "122 Main"));
+        for($row = 0; $row < 2; $row++){
+            for($col = 0; $col < 2; $col++){
+                echo $customers[$row][$col] . ", " ;
+            }
+            echo "<br>";
+        }
+        $let_str = "A B C D";
+        $let_arr = explode(" ", $let_str);
 
-        
 
 
     ?>
