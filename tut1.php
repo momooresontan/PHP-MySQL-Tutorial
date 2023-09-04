@@ -164,8 +164,23 @@
         function addNumbers($num1=0, $num2=0){
             return $num1 + $num2;
         }
-
+        printf("5 + 4 = %d<br>", addNumbers(5, 4));
         
+        function changeMe(&$change){
+            $change = 10;
+        }
+        $change = 5;
+        changeMe($change);
+        echo "Change: " . $change . "<br>";
+
+        function getSum(...$nums){
+            $sum = 0;
+            foreach($nums as $num){
+                $sum += $num;
+            }
+            return $sum;
+        }
+        printf("Sum = %d<br>", getSum(10, 45, 700, 67, 20))
         
 
 
