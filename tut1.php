@@ -220,13 +220,18 @@
         // echo "Important date: " . date("I F m-d-Y g:i:s A", $important_date) ."<br>";
         //Include file in your php file
         //include "sayHello.php";
-
-        function badDivide($num){
-            if($num == 0 ){
-                throw new Exception("You cannot divide by zero");
-            }
-            return $calc = 100 / $num;
-        }
+        //Exception handling
+        // function badDivide($num){
+        //     if($num == 0 ){
+        //         throw new Exception("You cannot divide by zero");
+        //     }
+        //     return $calc = 100 / $num;
+        // }
+        // try{
+        //     badDivide(0);
+        // }catch(Exception $e){
+        //     echo "Exception: " . $e->getMessage();
+        // }
 
 
 
