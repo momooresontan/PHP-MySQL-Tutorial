@@ -160,60 +160,73 @@
         // do{
         //     echo "Do while: $i<br>";
         // } while( $i > 0);
-
-        function addNumbers($num1=0, $num2=0){
-            return $num1 + $num2;
-        }
-        printf("5 + 4 = %d<br>", addNumbers(5, 4));
+        //Functions
+        // function addNumbers($num1=0, $num2=0){
+        //     return $num1 + $num2;
+        // }
+        // printf("5 + 4 = %d<br>", addNumbers(5, 4));
         
-        function changeMe(&$change){
-            $change = 10;
-        }
-        $change = 5;
-        changeMe($change);
-        echo "Change: " . $change . "<br>";
+        // function changeMe(&$change){
+        //     $change = 10;
+        // }
+        // $change = 5;
+        // changeMe($change);
+        // echo "Change: " . $change . "<br>";
 
-        function getSum(...$nums){
-            $sum = 0;
-            foreach($nums as $num){
-                $sum += $num;
+        // function getSum(...$nums){
+        //     $sum = 0;
+        //     foreach($nums as $num){
+        //         $sum += $num;
+        //     }
+        //     return $sum;
+        // }
+        // printf("Sum = %d<br>", getSum(10, 45, 700, 67, 20));
+
+        // function doMath($x, $y){
+        //     return array(
+        //         $x + $y, 
+        //         $x - $y
+        //     );
+        // }
+        // list($sum, $difference) = doMath(5, 4);
+        // echo "Sum = $sum<br>";
+        // echo "Difference = $difference<br>";
+
+        // function double($x){
+        //     return $x * $x;
+        // }
+        // $list = [1, 2, 3, 4];
+        // $double_list = array_map("double", $list);
+        // print_r($double_list);
+        // echo "<br>";
+        // function mult($x, $y){
+        //     $x *= $y;
+        //     return $x;
+        // }
+        // $list = [1, 2, 3, 4];
+        // $prod = array_reduce($list, "mult", 1);
+        // print_r($prod);
+        // echo "<br>";
+        // function isEven($x){
+        //     return ( $x % 2 == 0 );
+        // }
+        // $list = [1, 2, 3, 4];
+        // $even_list = array_filter($list, 'isEven');
+        // print_r($even_list);
+        //Date
+        // date_default_timezone_set("Africa/Lagos");
+        // echo "Date : " .date("I F m-d-Y g:i:s A") ."<br>";
+        // $important_date = mktime(0, 0, 0, 12, 21, 1974);
+        // echo "Important date: " . date("I F m-d-Y g:i:s A", $important_date) ."<br>";
+        //Include file in your php file
+        //include "sayHello.php";
+
+        function badDivide($num){
+            if($num == 0 ){
+                throw new Exception("You cannot divide by zero");
             }
-            return $sum;
+            return $calc = 100 / $num;
         }
-        printf("Sum = %d<br>", getSum(10, 45, 700, 67, 20));
-
-        function doMath($x, $y){
-            return array(
-                $x + $y, 
-                $x - $y
-            );
-        }
-        list($sum, $difference) = doMath(5, 4);
-        echo "Sum = $sum<br>";
-        echo "Difference = $difference<br>";
-
-        function double($x){
-            return $x * $x;
-        }
-        $list = [1, 2, 3, 4];
-        $double_list = array_map("double", $list);
-        print_r($double_list);
-        echo "<br>";
-        function mult($x, $y){
-            $x *= $y;
-            return $x;
-        }
-        $list = [1, 2, 3, 4];
-        $prod = array_reduce($list, "mult", 1);
-        print_r($prod);
-        echo "<br>";
-        function isEven($x){
-            return ( $x % 2 == 0 );
-        }
-        $list = [1, 2, 3, 4];
-        $even_list = array_filter($list, 'isEven');
-        print_r($even_list);
-        
 
 
 
