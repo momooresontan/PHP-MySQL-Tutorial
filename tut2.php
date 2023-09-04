@@ -32,7 +32,8 @@
             $output = sprintf("%.1f + %.1f = %.1f", $num1, $num2, ($num1 + $num2));
             echo htmlspecialchars($output) . "<br>";
             if(isset($_POST["website"])){
-                $website = filter_input()
+                $website = filter_input(INPUT_POST, "website", FILTER_VALIDATE_URL);
+                echo "Website:" . htmlspecialchars($website) . "<br>";
             }
         }
     ?>
