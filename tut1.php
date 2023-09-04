@@ -180,8 +180,41 @@
             }
             return $sum;
         }
-        printf("Sum = %d<br>", getSum(10, 45, 700, 67, 20))
+        printf("Sum = %d<br>", getSum(10, 45, 700, 67, 20));
+
+        function doMath($x, $y){
+            return array(
+                $x + $y, 
+                $x - $y
+            );
+        }
+        list($sum, $difference) = doMath(5, 4);
+        echo "Sum = $sum<br>";
+        echo "Difference = $difference<br>";
+
+        function double($x){
+            return $x * $x;
+        }
+        $list = [1, 2, 3, 4];
+        $double_list = array_map("double", $list);
+        print_r($double_list);
+        echo "<br>";
+        function mult($x, $y){
+            $x *= $y;
+            return $x;
+        }
+        $list = [1, 2, 3, 4];
+        $prod = array_reduce($list, "mult", 1);
+        print_r($prod);
+        echo "<br>";
+        function isEven($x){
+            return ( $x % 2 == 0 );
+        }
+        $list = [1, 2, 3, 4];
+        $even_list = array_filter($list, 'isEven');
+        print_r($even_list);
         
+
 
 
     ?>
