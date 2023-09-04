@@ -107,35 +107,43 @@
         // $rand_str = str_replace("String", "Characters", $rand_str);
         // printf("Replace: %s <br>", $rand_str);
         // printf("A == B: %d <br>", strcmp("B", "A"));
-
-        $friends = array("Lana", "Murewa", "FeyinT", "Sammy");
-        echo "Best friend: " . $friends[1] . "<br>";
-        $friends[4] = "Ade";
-        foreach ($friends as $f){
-            printf("Friend: %s<br>", $f);
-        }
-        $me_info = array("Name"=> "MoMo", "Street"=>"123 Main");
-        foreach($me_info as $k => $v){
-            printf("%s: %s<br>", $k, $v);
-        }
-        $person = array("Doug");
-        $friends = $friends + $person;
-        sort($friends);
-        rsort($friends);
-        asort($me_info);
-        ksort($me_info);
-        arsort($me_info);
-        krsort($me_info);
-        $customers = array(array("Derek", "123 Main"), array("Sully", "122 Main"));
-        for($row = 0; $row < 2; $row++){
-            for($col = 0; $col < 2; $col++){
-                echo $customers[$row][$col] . ", " ;
-            }
-            echo "<br>";
-        }
-        $let_str = "A B C D";
-        $let_arr = explode(" ", $let_str);
-
+        //Array
+        // $friends = array("Lana", "Murewa", "FeyinT", "Sammy");
+        // echo "Best friend: " . $friends[1] . "<br>";
+        // $friends[4] = "Ade";
+        // foreach ($friends as $f){
+        //     printf("Friend: %s<br>", $f);
+        // }
+        // $me_info = array("Name"=> "MoMo", "Street"=>"123 Main");
+        // foreach($me_info as $k => $v){
+        //     printf("%s: %s<br>", $k, $v);
+        // }
+        // $person = array("Doug");
+        // $friends = $friends + $person;
+        // sort($friends);
+        // rsort($friends);
+        // asort($me_info);
+        // ksort($me_info);
+        // arsort($me_info);
+        // krsort($me_info);
+        // $customers = array(array("Derek", "123 Main"), array("Sully", "122 Main"));
+        // for($row = 0; $row < 2; $row++){
+        //     for($col = 0; $col < 2; $col++){
+        //         echo $customers[$row][$col] . ", " ;
+        //     }
+        //     echo "<br>";
+        // }
+        // $let_str = "A B C D";
+        // $let_arr = explode(" ", $let_str);
+        // foreach($let_arr as $l){
+        //     printf("Letter: %s<br>", $l);
+        // }
+        // $let_str_2 = implode(" ", $let_arr); 
+        // echo "String: $let_str_2 <br>";
+        // printf("Key exists: %d<br>", array_key_exists("Momo", $me_info));
+        // printf("In array: %d<br>", in_array("Sammy", $friends));
+        
+        
 
 
     ?>
