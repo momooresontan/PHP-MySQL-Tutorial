@@ -142,6 +142,29 @@
         // echo "String: $let_str_2 <br>";
         // printf("Key exists: %d<br>", array_key_exists("Momo", $me_info));
         // printf("In array: %d<br>", in_array("Sammy", $friends));
+        //Loops
+        // $i = 0;
+        // while($i<10){
+        //     echo ++$i . ", ";
+        // }
+        // echo "<br>";
+        // for($i = 0; $i<10; $i++){
+        //     if($i % 2 == 0 ){
+        //         continue;
+        //     }
+        //     if( $i == 7) break;
+        //     echo $i . ", ";
+        // }
+        // echo "<br>";
+        // $i = 0;
+        // do{
+        //     echo "Do while: $i<br>";
+        // } while( $i > 0);
+
+        function addNumbers($num1=0, $num2=0){
+            return $num1 + $num2;
+        }
+
         
         
 
