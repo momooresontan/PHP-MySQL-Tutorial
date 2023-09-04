@@ -26,6 +26,15 @@
         } else{
             echo "Email is valid <br>";
         }
+        if(isset($_POST["num1"]) && !empty($_POST["num2"])){
+            $num1 = filter_input(INPUT_POST, "num1", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+            $num2 = filter_input(INPUT_POST, "num2", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+            $output = sprintf("%.1f + %.1f = %.1f", $num1, $num2, ($num1 + $num2));
+            echo htmlspecialchars($output) . "<br>";
+            if(isset($_POST["website"])){
+                $website = filter_input()
+            }
+        }
     ?>
 </body>
 </html>
