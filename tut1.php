@@ -27,6 +27,7 @@
         <input type="number" name="num2" ><br>
         <input type="submit" value="submit">
     </form> -->
+
     <?php 
         // if(isset($_GET) && array_key_exists("state", $_GET)){
         //     $state = $_GET["state"];
