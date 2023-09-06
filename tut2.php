@@ -38,12 +38,12 @@
         //     }
         // }
 
-        $con_html = "<a href='#'>Sample</a>";
-        echo $con_html . "<br>" ;
-        echo htmlspecialchars($con_html) . "<br>" ;
-        echo strip_tags($con_html, "<a>") . "<br>";
-        $con_html = strip_tags($con_html) . "<br>";
-        echo $con_html . "<br>";
+        // $con_html = "<a href='#'>Sample</a>";
+        // echo $con_html . "<br>" ;
+        // echo htmlspecialchars($con_html) . "<br>" ;
+        // echo strip_tags($con_html, "<a>") . "<br>";
+        // $con_html = strip_tags($con_html) . "<br>";
+        // echo $con_html . "<br>";
     ?>
 </body>
 </html>
