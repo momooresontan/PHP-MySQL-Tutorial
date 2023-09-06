@@ -1,7 +1,7 @@
 <?php
     require("db_connect.php");
-    $query_students = "SELECT * FROM student ORDER BY student_id";
-    $student_statement == $db->prepare($query_students);
+    $query_students = "SELECT * FROM students ORDER BY student_id";
+    $student_statement = $db->prepare($query_students);
     $student_statement ->execute();
     $students = $student_statement->fetchAll();
     $student_statement->closeCursor();
@@ -37,10 +37,16 @@
             <td><?php echo $student["student_id"]; ?></td>
             <td><?php echo $student["first_name"] . " " . $student["last_name"] ?></td>
             <td><?php echo $student["email"]; ?></td>
-            <td><?php echo $student["student_id"]; ?></td>
-            <td><?php echo $student["student_id"]; ?></td>
+            <td><?php echo $student["street"]; ?></td>
+            <td><?php echo $student["city"]; ?></td>
+            <td><?php echo $student["state"]; ?></td>
+            <td><?php echo $student["zip"]; ?></td>
+            <td><?php echo $student["phone"]; ?></td>
+            <td><?php echo $student["birth_date"]; ?></td>
+            <td><?php echo $student["sex"]; ?></td>
+            <td><?php echo $student["lunch_cost"]; ?></td>
         </tr>
-
+        <?php endforeach; ?>
     </table>
     <h3>Insert Student</h3>
     <form action="add_student.php" method="post"
