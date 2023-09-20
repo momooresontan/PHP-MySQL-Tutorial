@@ -1,3 +1,18 @@
+<?php 
+    $first_name = filter_input(INPUT_POST, "first_name");
+    $last_name = filter_input(INPUT_POST, "last_name");
+    $email = filter_input(INPUT_POST, "email");
+    $street = filter_input(INPUT_POST, "street");
+    $city = filter_input(INPUT_POST, "city");
+    $state = filter_input(INPUT_POST, "state");
+    $zip_code = filter_input(INPUT_POST, "zip");
+    $phone = filter_input(INPUT_POST, "phone");
+    $birth_date = filter_input(INPUT_POST, "birth_date");
+    $sex = filter_input(INPUT_POST, "sex");
+    $lunch_cost = filter_input(INPUT_POST, "lunch_cost");
+    $date_entered = date("Y-m-d H:i:s");
+?>
+
 <!DOCTYPE HTML>
  <html lang="en">
    <head>
