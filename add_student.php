@@ -41,6 +41,14 @@
     } elseif(!preg_match("/(([0-9]{1})*[- .(]*([0-9]{3})[- .)]*[0-9]{3}[- .]*[0-9]{4})+$/", $phone)){
         $err_msg = "Phone Not Valid<br>";
         include('db_error.php');
+    } elseif(!preg_match("/[0-9- ]{8,12}$/", $birth_date)){
+        $err_msg = "Birth Date Not Valid<br>";
+        include('db_error.php');
+    } elseif(!preg_match("/[MFmf]{1}$/", $sex)){
+        $err_msg = "Sex Not Valid<br>";
+        include('db_error.php');
+    } else{
+        
     }
 ?>
 
