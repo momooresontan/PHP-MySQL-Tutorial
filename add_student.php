@@ -32,7 +32,16 @@
     } elseif(!preg_match("/^[a-zA-Z\- ]{2,60}$/", $city)){
         $err_msg = "City not valid <br>";
         include("db_err.php");
-    } 
+    } elseif(!preg_match("/^(?:A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|PA|RI|S[CD]|T[NX]|UT|V[AT]|W[AIVY])*$/", $state)){
+        $err_msg = "State Not Valid<br>";
+        include('db_error.php');
+    } elseif(!preg_match("/[0-9]{5}$/", $zip)){
+        $err_msg = "Zip Not Valid<br>";
+        include('db_error.php');
+    } elseif(!preg_match("/(([0-9]{1})*[- .(]*([0-9]{3})[- .)]*[0-9]{3}[- .]*[0-9]{4})+$/", $phone)){
+        $err_msg = "Phone Not Valid<br>";
+        include('db_error.php');
+    }
 ?>
 
 <!DOCTYPE HTML>
