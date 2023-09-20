@@ -67,7 +67,18 @@
         $stm->bindValue(":sex", $sex); 
         $stm->bindValue(":lunch_cost", $lunch_cost); 
         $stm->bindValue(":date_entered", $date_entered); 
+        $stm->bindValue(":student_id", null, PDO::PARAM_INT); 
+        $execute_success = $stm->execute();
+        $stm->closeCursor(); 
+        if(!$execute_success){
+            print_r($stm->errorInfo()[2]);
+        }
     }
+    require_once("db_connect.php");
+    $query_student = "SELECT * FROM students ORDER BY student_id";
+    $student_statement->execute();
+    $students = $student_statement->fetchAll();
+    $student_statement->closeCursor();
 ?>
 
 <!DOCTYPE HTML>
