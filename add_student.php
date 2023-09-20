@@ -23,7 +23,16 @@
     } elseif(!preg_match("/[a-zA-Z]{3,30}$/", $last_name)){
         $err_msg = "Last name not valid <br>";
         include("db_err.php");
-    }
+    } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $err_msg = "Email not valid <br>";
+        include("db_err.php");
+    } elseif(!preg_match("/^[a-zA-Z0-9 ,#'\/.]{3,50}$/", $street)){
+        $err_msg = "Street not valid <br>";
+        include("db_err.php");
+    } elseif(!preg_match("/^[a-zA-Z\- ]{2,60}$/", $city)){
+        $err_msg = "City not valid <br>";
+        include("db_err.php");
+    } 
 ?>
 
 <!DOCTYPE HTML>
