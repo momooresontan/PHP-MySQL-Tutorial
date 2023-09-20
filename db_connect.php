@@ -1,6 +1,6 @@
 <?php 
-    DEFINE("DB_USER", "studentwebphp");
-    DEFINE("DB_PASSWORD", "studentwebphp");
+    DEFINE("DB_USER", "studentweb");
+    DEFINE("DB_PASSWORD", "studentweb");
 
     $dsn = "mysql:host=localhost;dbname=students";
     try{
