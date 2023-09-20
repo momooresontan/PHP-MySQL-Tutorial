@@ -11,6 +11,13 @@
     $sex = filter_input(INPUT_POST, "sex");
     $lunch_cost = filter_input(INPUT_POST, "lunch_cost");
     $date_entered = date("Y-m-d H:i:s");
+    //Verify input data
+    if($first_name == null || $last_name == null || $email == null || 
+    $street == null || $city == null || $zip == null || $phone == null || 
+    $birth_date == null || $sex == null || $lunch_cost == false ){
+        $err_msg = "All values not entered <br>";
+        include("db_err.php");
+    }
 ?>
 
 <!DOCTYPE HTML>
