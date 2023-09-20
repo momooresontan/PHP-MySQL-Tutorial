@@ -29,8 +29,8 @@
         <th>Phone</th>
         <th>BD</th>
         <th>Sex</th>
-        <th>Entered</th>
         <th>Lunch</th>
+        <th>Entered</th>
       </tr>
       <?php foreach($students as $student) : ?>
         <tr>
@@ -45,6 +45,7 @@
             <td><?php echo $student["birth_date"]; ?></td>
             <td><?php echo $student["sex"]; ?></td>
             <td><?php echo $student["lunch_cost"]; ?></td>
+            <td><?php echo $student["date_entered"]; ?></td>
         </tr>
         <?php endforeach; ?>
     </table>
