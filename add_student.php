@@ -17,6 +17,12 @@
     $birth_date == null || $sex == null || $lunch_cost == false ){
         $err_msg = "All values not entered <br>";
         include("db_err.php");
+    } elseif(!preg_match("/[a-zA-Z]{3,30}$/", $first_name)){
+        $err_msg = "First name not valid <br>";
+        include("db_err.php");
+    } elseif(!preg_match("/[a-zA-Z]{3,30}$/", $last_name)){
+        $err_msg = "Last name not valid <br>";
+        include("db_err.php");
     }
 ?>
 
