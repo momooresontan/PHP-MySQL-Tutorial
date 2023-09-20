@@ -48,7 +48,25 @@
         $err_msg = "Sex Not Valid<br>";
         include('db_error.php');
     } else{
-        
+        require_once("db_connect.php");
+        $query = "INSERT INTO students(first_name, last_name, email, 
+        street, city, state, zip, phone, birth_date, sex, lunch_cost, 
+        date_entered, student_id) VALUES (:first_name, :last_name, :email, 
+        :street, :city, :state, :zip, :phone, :birth_date, :sex, :lunch_cost, 
+        :date_entered, :student_id)";  
+        $stm = $db->prepare($query);
+        $stm->bindValue(":first_name", $first_name); 
+        $stm->bindValue(":last_name", $last_name); 
+        $stm->bindValue(":email", $email); 
+        $stm->bindValue(":street", $street); 
+        $stm->bindValue(":city", $city); 
+        $stm->bindValue(":state", $state); 
+        $stm->bindValue(":zip", $zip); 
+        $stm->bindValue(":phone", $phone); 
+        $stm->bindValue(":birth_date", $birth_date); 
+        $stm->bindValue(":sex", $sex); 
+        $stm->bindValue(":lunch_cost", $lunch_cost); 
+        $stm->bindValue(":date_entered", $date_entered); 
     }
 ?>
 
