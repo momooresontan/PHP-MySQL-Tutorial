@@ -5,7 +5,7 @@
     $street = filter_input(INPUT_POST, "street");
     $city = filter_input(INPUT_POST, "city");
     $state = filter_input(INPUT_POST, "state");
-    $zip_code = filter_input(INPUT_POST, "zip");
+    $zip = filter_input(INPUT_POST, "zip");
     $phone = filter_input(INPUT_POST, "phone");
     $birth_date = filter_input(INPUT_POST, "birth_date");
     $sex = filter_input(INPUT_POST, "sex");
@@ -76,6 +76,7 @@
     }
     require_once("db_connect.php");
     $query_student = "SELECT * FROM students ORDER BY student_id";
+    $student_statement = $db->prepare($query_student);
     $student_statement->execute();
     $students = $student_statement->fetchAll();
     $student_statement->closeCursor();
