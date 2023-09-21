@@ -20,7 +20,7 @@
             }
             function __construct(){
                 $this->id = rand(100, 1000000);
-                echo $this->id . "has been assigned<br>";
+                echo $this->id . " has been assigned<br>";
                 Animal::$number_of_animal++; 
             }
             public function __destruct(){
@@ -28,7 +28,7 @@
             }
             function __get($name){
                 echo "Asked for " . $name . "<br>";
-                return $this->name;
+                return $this->$name;
             }
             function __set($name, $value){
                 switch($name){
@@ -40,9 +40,6 @@
                         break;
                     case "sound": 
                         $this->sound = $value;
-                        break;
-                    case "id": 
-                        $this->id = $value;
                         break;
                     default:
                         echo $name . " not found <br>";
@@ -68,11 +65,9 @@
         $animal_one->name = "Spot";
         $animal_one->favourite_food = "Meat";
         $animal_one->sound = "Ruff";
-
         echo $animal_one->name . " says " . $animal_one->sound . 
         " give me some " . $animal_one->favourite_food . " my id is " . 
         $animal_one->id . " total animals = " . Animal::$number_of_animal . "<br>";
-        
         echo "Favourite Number " . Animal::PI . "<br>";
     ?>
 </body>
