@@ -100,6 +100,11 @@
         }
         make_them_sing($animal_one);
         make_them_sing($animal_two);
+        echo "3 + 5 = " . Animal::add_these(3, 5);
+
+        $is_it_an_animal = ($animal_two instanceof Animal) ? "True" : "False";
+        echo $is_it_an_animal . "<br>";
+
     ?>
 </body>
 </html>
