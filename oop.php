@@ -44,10 +44,22 @@
                     case "id": 
                         $this->id = $value;
                         break;
-                    
+                    default:
+                        echo $name . " not found <br>";
                 }
+                echo "Set " . $name . " to " . $value . "<br>";
             }
-
+            function run(){
+                echo $this->name . " runs<br>";
+            }
+            final function what_is_good(){
+                echo "Running is good<br>";
+            }
+            function __toString(){
+                return $this->name . "says " . $this->sound . 
+                " give me some " . $this->favourite_food . " my id is " . 
+                $this->id . " total animals = " . Animal::$number_of_animal . "<br>";
+            }
         }
     ?>
 </body>
