@@ -9,6 +9,20 @@
     <?php 
         class Animal{
             protected $name;
+            protected $favourite_food;
+            protected $sound;
+            protected $id;
+
+            public static $number_of_animal = 0;
+            const PI = "3.14159";
+            function getName(){
+                return $this->name;
+            }
+            function __construct(){
+                $this->id = rand(100, 1000000);
+                echo $this->id . "has been assigned<br>";
+                Animal::$number_of_animal++; 
+            }
         }
     ?>
 </body>
