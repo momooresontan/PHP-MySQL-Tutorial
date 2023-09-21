@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php 
-        class Animal{
+        class Animal implements Singable{
             protected $name;
             protected $favourite_food;
             protected $sound;
@@ -60,6 +60,9 @@
             static function add_these($num1, $num2){
                 return ($num1 + $num2) . "<br>";
             }
+            public function sing(){
+                echo $this->name . " sings Grr grr grr<br>";
+            }
         }
         class Dog extends Animal implements Singable{
             function run(){
@@ -92,8 +95,11 @@
         $animal_one->id . " total animals = " . Animal::$number_of_animal . "<br>";
         echo "Favourite Number " . Animal::PI . "<br>";
 
-        $animal_one->run();
-        $animal_two->run();
+        function make_them_sing(Singable $singable_animal){
+            $singable_animal->sing();
+        }
+        make_them_sing($animal_one);
+        make_them_sing($animal_two);
     ?>
 </body>
 </html>
