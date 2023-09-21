@@ -61,6 +61,12 @@
                 return ($num1 + $num2) . "<br>";
             }
         }
+        class Dog extends Animal {
+            function run(){
+                echo $this->name ." runs like crazy<br>";
+            }
+        }
+
         $animal_one = new Animal();
         $animal_one->name = "Spot";
         $animal_one->favourite_food = "Meat";
