@@ -50,11 +50,11 @@
         include('db_error.php');
     } else{
         require_once("db_connect.php");
-        $query = "INSERT INTO students(first_name, last_name, email, 
-        street, city, state, zip, phone, birth_date, sex, lunch_cost, 
-        date_entered, student_id) VALUES (:first_name, :last_name, :email, 
-        :street, :city, :state, :zip, :phone, :birth_date, :sex, :lunch_cost, 
-        :date_entered, :student_id)";  
+        $query = "UPDATE students SET first_name = :first_name, 
+        last_name = :last_name, email = :email, street = :street, 
+        city = :city, state = :state, zip = :zip, phone = :phone, 
+        birth_date = :birth_date, sex = :sex, lunch_cost = :lunch_cost 
+        WHERE student_id = :student_id";  
         $stm = $db->prepare($query);
         $stm->bindValue(":first_name", $first_name); 
         $stm->bindValue(":last_name", $last_name); 
@@ -68,7 +68,7 @@
         $stm->bindValue(":sex", $sex); 
         $stm->bindValue(":lunch_cost", $lunch_cost); 
         $stm->bindValue(":date_entered", $date_entered); 
-        $stm->bindValue(":student_id", null, PDO::PARAM_INT); 
+        $stm->bindValue(":student_id", $student_id); 
         $execute_success = $stm->execute();
         $stm->closeCursor(); 
         if(!$execute_success){
