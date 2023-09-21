@@ -23,6 +23,31 @@
                 echo $this->id . "has been assigned<br>";
                 Animal::$number_of_animal++; 
             }
+            public function __destruct(){
+                echo $this->name . "is being destroyed";
+            }
+            function __get($name){
+                echo "Asked for " . $name . "<br>";
+                return $this->name;
+            }
+            function __set($name, $value){
+                switch($name){
+                    case "name": 
+                        $this->name = $value;
+                        break;
+                    case "favourite_food": 
+                        $this->favourite_food = $value;
+                        break;
+                    case "sound": 
+                        $this->sound = $value;
+                        break;
+                    case "id": 
+                        $this->id = $value;
+                        break;
+                    
+                }
+            }
+
         }
     ?>
 </body>
