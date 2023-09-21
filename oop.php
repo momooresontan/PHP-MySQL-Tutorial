@@ -61,10 +61,17 @@
                 return ($num1 + $num2) . "<br>";
             }
         }
-        class Dog extends Animal {
+        class Dog extends Animal implements Singable{
             function run(){
                 echo $this->name ." runs like crazy<br>";
             }
+            public function sing(){
+                echo $this->name . " sings Bow wow wow<br>";
+            }
+        }
+
+        interface Singable{
+            public function sing();
         }
 
         $animal_two = new Dog();
