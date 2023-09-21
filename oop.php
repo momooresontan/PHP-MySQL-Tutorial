@@ -24,7 +24,7 @@
                 Animal::$number_of_animal++; 
             }
             public function __destruct(){
-                echo $this->name . "is being destroyed";
+                echo $this->name . " is being destroyed";
             }
             function __get($name){
                 echo "Asked for " . $name . "<br>";
@@ -60,7 +60,16 @@
                 " give me some " . $this->favourite_food . " my id is " . 
                 $this->id . " total animals = " . Animal::$number_of_animal . "<br>";
             }
+            static function add_these($num1, $num2){
+                return ($num1 + $num2) . "<br>";
+            }
         }
+        $animal_one = new Animal();
+        $animal_one->name = "Spot";
+        $animal_one->favourite_food = "Meat";
+        $animal_one->sound = "Ruff";
+
+        echo $animal_one->name;
     ?>
 </body>
 </html>
