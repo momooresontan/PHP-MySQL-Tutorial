@@ -56,7 +56,7 @@
                 echo "Running is good<br>";
             }
             function __toString(){
-                return $this->name . "says " . $this->sound . 
+                return $this->name . " says " . $this->sound . 
                 " give me some " . $this->favourite_food . " my id is " . 
                 $this->id . " total animals = " . Animal::$number_of_animal . "<br>";
             }
@@ -69,7 +69,11 @@
         $animal_one->favourite_food = "Meat";
         $animal_one->sound = "Ruff";
 
-        echo $animal_one->name;
+        echo $animal_one->name . " says " . $animal_one->sound . 
+        " give me some " . $animal_one->favourite_food . " my id is " . 
+        $animal_one->id . " total animals = " . Animal::$number_of_animal . "<br>";
+        
+        echo "Favourite Number " . Animal::PI . "<br>";
     ?>
 </body>
 </html>
