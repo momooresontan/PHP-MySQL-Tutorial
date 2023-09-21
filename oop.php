@@ -67,6 +67,15 @@
             }
         }
 
+        $animal_two = new Dog();
+        $animal_two->name = "Glover";
+        $animal_two->favourite_food = "Mushrooms";
+        $animal_two->sound = "Grrrrr";
+        echo $animal_two->name . " says " . $animal_two->sound . 
+        " give me some " . $animal_two->favourite_food . " my id is " . 
+        $animal_two->id . " total animals = " . Dog::$number_of_animal . "<br>";
+        echo "Favourite Number " . Dog::PI . "<br>";
+        
         $animal_one = new Animal();
         $animal_one->name = "Spot";
         $animal_one->favourite_food = "Meat";
@@ -75,6 +84,9 @@
         " give me some " . $animal_one->favourite_food . " my id is " . 
         $animal_one->id . " total animals = " . Animal::$number_of_animal . "<br>";
         echo "Favourite Number " . Animal::PI . "<br>";
+
+        $animal_one->run();
+        $animal_two->run();
     ?>
 </body>
 </html>
