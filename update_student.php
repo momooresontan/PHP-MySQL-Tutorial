@@ -67,7 +67,6 @@
         $stm->bindValue(":birth_date", $birth_date); 
         $stm->bindValue(":sex", $sex); 
         $stm->bindValue(":lunch_cost", $lunch_cost); 
-        $stm->bindValue(":date_entered", $date_entered); 
         $stm->bindValue(":student_id", $student_id); 
         $execute_success = $stm->execute();
         $stm->closeCursor(); 
